@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:show, :create]
       resources :weights, only: [:index, :create]
+      resources :glucoses, only: [:index, :create]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
     end
